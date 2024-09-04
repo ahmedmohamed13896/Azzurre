@@ -14,11 +14,9 @@ setInterval(() => {
 
 
 // Check if the browser supports WebM format
-var video = document.createElement('video');
-var canPlayWebM = video.canPlayType('video/webm; codecs="vp8, vorbis"');
-
-if (canPlayWebM === '') {
-    // Browser cannot play WebM, hide video and show GIF
+var isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+if (isIOS) {
     document.getElementById('background-video').style.display = 'none';
+    // Show a GIF or image instead
     document.getElementById('background-gif').style.display = 'block';
 }
