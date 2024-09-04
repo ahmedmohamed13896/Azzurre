@@ -1,0 +1,249 @@
+html {
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    font-family: 'Work Sans', sans-serif;
+    position: relative;
+}
+
+.main-section {
+    width: 100%;
+    min-height: 100vh;
+    background: radial-gradient(22.71% 30.18% at 53.49% 56.85%, #1A485C 0%, #152839 100%);
+}
+
+.main-content {
+    overflow: hidden;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    position: relative;
+}
+
+.background-video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    -webkit-object-fit: contain;
+    -moz-object-fit: contain;
+    -ms-object-fit: contain;
+    object-fit: contain;
+    object-position: 50% 50%;
+}
+
+.logo {
+    max-width: 370px;
+    width: 90%;
+}
+
+.form-wrapper {
+    max-width: 450px;
+    width: 100%;
+}
+
+.form-wrapper .form-title {
+    font-size: 1.375rem;
+    font-weight: 300;
+    line-height: 1.1;
+    text-align: center;
+    color: #A88873;
+}
+
+.form-wrapper .input-wrapper {
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 25px;
+    overflow: hidden;
+    margin: auto;
+    width: 90%;
+}
+
+.form-wrapper .input-wrapper input {
+    border: 3px solid #BDD3DD;
+    border-radius: 25px;
+    height: 3rem;
+    padding: 1rem 9.06rem 1rem 1rem;
+    border: 0 !important;
+    color: #1A485C;
+    font-weight: 500;
+    width: 100%;
+}
+
+.form-wrapper .input-wrapper input::placeholder,
+.form-wrapper .input-wrapper input::-moz-placeholder,
+.form-wrapper .input-wrapper input:-ms-input-placeholder {
+    color: #8C8CA1;
+}
+
+.form-wrapper .input-wrapper .notify-me {
+    width: 8.125rem;
+    outline: none;
+    border: 0;
+    box-shadow: none;
+    padding: .5rem 1rem;
+    color: #BDD3DD;
+    background-color: #1A485C;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: 0.04em;
+    text-align: center;
+    height: 100%;
+    position: absolute;
+    right: 3px;
+    height: calc(3rem - 6px);
+    top: 3px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.form-wrapper .info p {
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 16.42px;
+    text-align: center;
+    color: #C4C4C4;
+}
+
+
+/* Animated section */
+.animated-content .item {
+    display: none;
+}
+
+.animated-content hr {
+    max-width: 600px;
+    width: 65%;
+    background: #F9F4EF;
+    height: 1.5px;
+    margin-right: auto;
+    margin-left: auto;
+    opacity: 0;
+    animation: fadeIn 2.5s ease-in forwards;
+}
+
+.heading-output {
+    color: #FFFFFF;
+    font-size: 3rem;
+    font-weight: 300;
+    line-height: 1.1;
+    text-align: center;
+    text-transform: capitalize;
+    opacity: 0;
+    transform: translateX(100%);
+    animation: fadeInLeft 1.5s ease-in forwards;
+}
+
+.heading-output span {
+    color: #A88873;
+}
+
+.info-output {
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.3;
+    text-align: center;
+    text-transform: capitalize;
+    opacity: 0;
+    transform: translateX(100%);
+    animation: fadeInLeft 1.5s .5s ease-in forwards;
+}
+
+.info-output span {
+    color: #A88873;
+}
+
+.animated-content .active {
+    display: block;
+}
+
+.animated-content .active .heading-output,
+.animated-content .active .info-output {
+    display: block;
+}
+
+.animated-content .active .heading-output,
+.animated-content .active .info-output {
+    display: block;
+}
+
+
+/* Media */
+@media screen and (max-width:992px) {
+
+    :root {
+        font-size: 15px;
+    }
+
+    .main-section {
+        background: radial-gradient(47.71% 33.18% at 50.49% 48.85%, #1A485C 0%, #152839 100%);
+    }
+
+    .logo {
+        max-width: 250px;
+    }
+
+    .heading-output {
+        font-size: 2.75rem;
+    }
+
+    .info-output {
+        font-size: 1.25rem;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .heading-output {
+        font-size: 2.5rem;
+    }
+
+    .info-output {
+        font-size: 1.25rem;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .heading-output {
+        font-size: 2.25rem;
+    }
+
+    .info-output {
+        font-size: 1rem;
+    }
+}
+
+/* Keyframes */
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Keyframes */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
