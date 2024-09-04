@@ -1,24 +1,29 @@
 html {
-    height: 100%;
+    height: 100vh;
+    position: relative;
 }
 
 body {
     width: 100%;
     font-family: 'Work Sans', sans-serif;
-    position: relative;
+    min-height: 100%;
+    display: flex;
 }
 
 .main-section {
     width: 100%;
+    display: flex;
+    position: relative;
+    min-height: 100%;
 }
 
 .main-content {
     overflow: hidden;
     width: 100%;
-    min-height: 100vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     z-index: 1;
     position: relative;
@@ -232,7 +237,6 @@ footer .icon-link:hover .icon-hover{
 
 /* Media */
 @media screen and (max-width:992px) {
-
     :root {
         font-size: 15px;
     }
@@ -241,21 +245,25 @@ footer .icon-link:hover .icon-hover{
         max-width: 250px;
     }
 
-    .heading-output {
+    .animated-content .heading-output {
         font-size: 2.75rem;
     }
 
-    .info-output {
+    .animated-content .info-output {
         font-size: 1.15rem;
     }
 }
 
 @media screen and (max-width:768px) {
-    .heading-output {
-        font-size: 2.5rem;
-    }
     .background-video{
         background: radial-gradient(43.71% 22.18% at 50.49% 56.85%, #1A485C 0%, #152839 100%);
+    }
+    .animated-content .heading-output {
+        font-size: 2rem;
+    }
+
+    .animated-content .info-output {
+        font-size: 1rem;
     }
 }
 
@@ -264,13 +272,7 @@ footer .icon-link:hover .icon-hover{
         background: radial-gradient(33.71% 39.18% at 50.49% 56.85%, #1A485C 0%, #152839 100%);
         object-position: 50% 58%;
     }
-    .heading-output {
-        font-size: 2.25rem;
-    }
-
-    .info-output {
-        font-size: 1rem;
-    }
+    
 }
 
 /* Keyframes */
