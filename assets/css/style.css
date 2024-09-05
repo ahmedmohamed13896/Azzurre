@@ -15,11 +15,6 @@ body {
     position: relative;
 }
 
-/* 
-html {
-    position: relative;
-} */
-
 .main-content {
     overflow: hidden;
     width: 100%;
@@ -30,6 +25,7 @@ html {
     align-items: center;
     z-index: 1;
     position: relative;
+    min-height: 100vh;
 }
 
 .background-video {
