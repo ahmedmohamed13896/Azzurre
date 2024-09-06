@@ -22,7 +22,7 @@ function preloadImages(callback) {
 
     for (let i = 2000; i <= lastItemNumber; i++) {
         let img = new Image();
-        img.src = './assets/images/sequence-images/azzurre-img' + i + '.png';
+        img.src = './assets/images/sequence-images-min/azzurre-img' + i + '-min.png';
         secquenceImages.push(img);
 
         img.onload = function () {
@@ -38,10 +38,10 @@ function startAnimation(){
     let startIndex = 2000;
     const endIndex = 2165;
     setInterval(function () {
-        document.querySelector('#png-sequence img').src = './assets/images/sequence-images/azzurre-img' + startIndex + '.png';
+        document.querySelector('#png-sequence img').src = './assets/images/sequence-images-min/azzurre-img' + startIndex + '-min.png';
         startIndex++;
         startIndex = startIndex === endIndex ? 2000 : (startIndex);
-    }, 50);
+    }, 30);
 }
 
 // Preload images and start the animation after loading

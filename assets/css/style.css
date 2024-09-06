@@ -43,7 +43,7 @@ body {
     -ms-object-fit: contain;
     object-fit: contain;
     object-position: 50% 65%;
-    background: radial-gradient(22.71% 30.18% at 53.49% 56.85%, #1A485C 0%, #152839 100%);
+    background: radial-gradient(40.71% 19.18% at 50.49% 50.85%, #1A485C -53%, #152839 76%);
 }
 
 .background-video img{
@@ -263,13 +263,13 @@ footer .icon-link:hover .icon-hover{
         font-size: 1.15rem;
     }
     .form-wrapper {
-        padding-top: 25vw;
+        padding-top: 45vw;
     }
 }
 
 @media screen and (max-width:768px) {
     .background-video{
-        background: radial-gradient(43.71% 22.18% at 50.49% 56.85%, #1A485C 0%, #152839 100%);
+        background: radial-gradient(40.71% 19.18% at 49.49% 50.85%, #1A485C -57%, #152839 76%);
     }
     .animated-content .heading-output p{
         font-size: 2rem;
@@ -282,8 +282,8 @@ footer .icon-link:hover .icon-hover{
 
 @media screen and (max-width:500px) {
     .background-video{
-        background: radial-gradient(33.71% 39.18% at 50.49% 56.85%, #1A485C 0%, #152839 100%);
-        object-position: 50% 58%;
+        background: radial-gradient(40.71% 19.18% at 49.49% 50.85%, #1A485C -57%, #152839 76%);
+        object-position: 50% 67%;
     }
     
 }
