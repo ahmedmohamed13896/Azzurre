@@ -14,7 +14,8 @@ setInterval(() => {
 }, 5000); // Change the class every 1 second (1000 ms)
 
 
-// Function to preload all sequenceImages
+
+// Function to preload all secquenceImages
 function preloadImages(callback) {
     let currentIndex = 2000;
     let lastItemNumber = 2164;
@@ -27,34 +28,29 @@ function preloadImages(callback) {
         img.onload = function () {
             currentIndex++;
             if (currentIndex === lastItemNumber) {
-                callback(); // Start the animation after preloading all images
+                callback();
             }
         };
     }
 }
 
-function startAnimation() {
+function startAnimation(){
     let startIndex = 2000;
     const endIndex = 2165;
-    let lastFrameTime = 0; // Keep track of time for smooth animation
+    setInterval(function () {
+        document.querySelector('#png-sequence img').src = './assets/images/sequence-images-min/azzurre-img' + startIndex + '-min.png';
+        startIndex++;
+        startIndex = startIndex === endIndex ? 2000 : (startIndex);
+    }, 30);
 
-    function animateFrames(timestamp) {
-        if (timestamp - lastFrameTime >= 30) { // Update frame every 30ms
-            document.querySelector('#png-sequence img').src = './assets/images/sequence-images-min/azzurre-img' + startIndex + '-min.png';
-            startIndex++;
-            if (startIndex === endIndex) {
-                startIndex = 2000; // Reset to the first image if we've reached the end
-            }
-            lastFrameTime = timestamp; // Update last frame time
-        }
-
-        requestAnimationFrame(animateFrames); // Continue the animation
-    }
-
-    requestAnimationFrame(animateFrames); // Start the first frame
+    requestAnimationFrame(startAnimation)
 }
 
 // Preload images and start the animation after loading
 window.onload = function () {
-    preloadImages(startAnimation);
+    preloadImages(startAnimation)    
 };
+
+
+
+
