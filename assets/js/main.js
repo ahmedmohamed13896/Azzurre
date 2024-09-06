@@ -29,6 +29,7 @@ function preloadImages(callback) {
             currentIndex++;
             if (currentIndex === lastItemNumber) {
                 callback();
+                document.querySelector('.loader_section').style.display =  'none';
             }
         };
     }
@@ -42,7 +43,6 @@ function startAnimation(){
         startIndex++;
         startIndex = startIndex === endIndex ? 2000 : (startIndex);
     }, 30);
-    document.querySelector('.loader_section').style.display =  'none';
 }
 
 // Preload images and start the animation after loading
