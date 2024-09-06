@@ -1,5 +1,6 @@
 const items = document.querySelectorAll('.animated-content .item');
 let currentIndex = 1;
+const secquenceImages = []; // Array to hold all preloaded images
 
 setInterval(() => {
     // Remove 'active' class from all items
@@ -13,10 +14,41 @@ setInterval(() => {
 }, 5000); // Change the class every 1 second (1000 ms)
 
 
-// Check if the browser supports WebM format
-var isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
-if (isIOS) {
-    document.getElementById('background-video').style.display = 'none';
-    // Show a GIF or image instead
-    document.getElementById('background-gif').style.display = 'block';
+
+// Function to preload all secquenceImages
+function preloadImages(callback) {
+    let currentIndex = 2000;
+    let lastItemNumber = 2164;
+
+    for (let i = 2000; i <= lastItemNumber; i++) {
+        let img = new Image();
+        img.src = './assets/images/sequence-images/azzurre-img' + i + '.png';
+        secquenceImages.push(img);
+
+        img.onload = function () {
+            currentIndex++;
+            if (currentIndex === lastItemNumber) {
+                callback();
+            }
+        };
+    }
 }
+
+function startAnimation(){
+    let startIndex = 2000;
+    const endIndex = 2165;
+    setInterval(function () {
+        document.querySelector('#png-sequence img').src = './assets/images/sequence-images/azzurre-img' + startIndex + '.png';
+        startIndex++;
+        startIndex = startIndex === endIndex ? 2000 : (startIndex);
+    }, 50);
+}
+
+// Preload images and start the animation after loading
+window.onload = function () {
+    preloadImages(startAnimation)    
+};
+
+
+
+

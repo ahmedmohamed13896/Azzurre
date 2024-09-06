@@ -36,12 +36,18 @@ body {
     right: 0;
     top: 0;
     bottom: 0;
+    display: flex;
+    justify-content: center;
     -webkit-object-fit: contain;
     -moz-object-fit: contain;
     -ms-object-fit: contain;
     object-fit: contain;
     object-position: 50% 65%;
     background: radial-gradient(22.71% 30.18% at 53.49% 56.85%, #1A485C 0%, #152839 100%);
+}
+
+.background-video img{
+    object-fit: contain;
 }
 
 .logo {
@@ -255,6 +261,9 @@ footer .icon-link:hover .icon-hover{
 
     .animated-content .info-output p{
         font-size: 1.15rem;
+    }
+    .form-wrapper {
+        padding-top: 25vw;
     }
 }
 
