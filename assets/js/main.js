@@ -42,8 +42,7 @@ function startAnimation(){
         startIndex++;
         startIndex = startIndex === endIndex ? 2000 : (startIndex);
     }, 30);
-
-    requestAnimationFrame(startAnimation)
+    
 }
 
 // Preload images and start the animation after loading
