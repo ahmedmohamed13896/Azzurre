@@ -42,6 +42,7 @@ body {
     -moz-object-fit: contain;
     -ms-object-fit: contain;
     object-fit: contain;
+    overflow: hidden;
     object-position: 50% 65%;
     background: radial-gradient(40.71% 19.18% at 50.49% 50.85%, #1A485C -53%, #152839 76%);
 }
@@ -49,6 +50,7 @@ body {
 .background-video img{
     object-fit: contain;
     filter: brightness(1.3);
+    transform: translateY(6%);
 }
 
 .logo {
@@ -270,7 +272,8 @@ footer .icon-link:hover .icon-hover{
 
 @media screen and (max-width:768px) {
     .background-video{
-        background: radial-gradient(40.71% 19.18% at 49.49% 50.85%, #1A485C -57%, #152839 76%);
+        background: radial-gradient(40.71% 19.18% at 49.49% 56.85%, #1A485C -57%, #152839 76%);
+        object-position: 50% 67%;
     }
     .animated-content .heading-output p{
         font-size: 2rem;
@@ -279,14 +282,6 @@ footer .icon-link:hover .icon-hover{
     .animated-content .info-output p{
         font-size: 1rem;
     }
-}
-
-@media screen and (max-width:500px) {
-    .background-video{
-        background: radial-gradient(40.71% 19.18% at 49.49% 50.85%, #1A485C -57%, #152839 76%);
-        object-position: 50% 67%;
-    }
-    
 }
 
 /* Keyframes */
