@@ -273,13 +273,39 @@ footer .icon-link:hover .icon-hover{
     animation: puls 1s linear infinite;
 }
 
+/* Line loader */
+.loader-line {
+    width: 100px; /* Width of the line */
+    height: 4px; /* Thickness of the line */
+    background-color: #fff; /* Background color of the line */
+    position: relative;
+    overflow: hidden;
+}
+
+/* The animated line */
+.loader-line::before {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 0;
+    background-color: #A88873; /* The color of the loading line */
+    animation: lineLoading 3s linear infinite;
+    position: absolute;
+}
+
+/* Keyframe animation for the loading line */
+@keyframes lineLoading {
+    0% { width: 0; }
+    100% { width: 100%; }
+}
+
 @keyframes puls {
     0% {
         transform: scale(1);
     }
 
     100% {
-        transform: scale(1.6);
+        transform: scale(1.4);
     }
 }
 
