@@ -13,6 +13,7 @@ body {
     width: 100%;
     display: flex;
     position: relative;
+    background: #152838;
 }
 
 .main-content {
@@ -43,18 +44,17 @@ body {
     -ms-object-fit: contain;
     object-fit: contain;
     overflow: hidden;
-    object-position: 50% 65%;
-    background: radial-gradient(40.71% 19.18% at 50.49% 50.85%, #1A485C -53%, #152839 76%);
+    object-position: 50% 50%;
 }
 
 .background-video img{
     object-fit: contain;
-    filter: brightness(1.3);
+    /* filter: brightness(1.3); */
     transform: translateY(6%);
 }
 
 .logo {
-    max-width: 370px;
+    max-width: 300px;
     width: 90%;
 }
 
@@ -163,14 +163,13 @@ body {
     animation: fadeInUp 2.5s .7s ease-in forwards;
 }
 
-.animated-content .heading-output,
-.animated-content .info-output{
+.animated-content .heading-output{
     overflow: hidden;
 }
 
 .animated-content .heading-output p{
     color: #FFFFFF;
-    font-size: 3rem;
+    font-size: 2.75rem;
     font-weight: 300;
     line-height: 1.1;
     text-align: center;
@@ -184,33 +183,16 @@ body {
     color: #A88873;
 }
 
-.animated-content .info-output p{
-    color: #FFFFFF;
-    font-size: 1.5rem;
-    font-weight: 400;
-    line-height: 1.3;
-    text-align: center;
-    text-transform: capitalize;
-    opacity: 0;
-    transform: translateY(100%);
-    animation: fadeInUp 1.5s .5s ease-in forwards;
-}
-
-.animated-content .info-output span {
-    color: #A88873;
-}
 
 .animated-content .active {
     display: block;
 }
 
-.animated-content .active .heading-output,
-.animated-content .active .info-output {
+.animated-content .active .heading-output {
     display: block;
 }
 
-.animated-content .active .heading-output,
-.animated-content .active .info-output {
+.animated-content .active .heading-output{
     display: block;
 }
 
@@ -322,28 +304,21 @@ footer .icon-link:hover .icon-hover{
     }
 
     .animated-content .heading-output p{
-        font-size: 2.75rem;
+        font-size: 2.5rem;
     }
 
-    .animated-content .info-output p{
-        font-size: 1.15rem;
-    }
     .form-wrapper {
-        padding-top: 45vw;
+        padding-top: 35vw;
     }
 }
 
 @media screen and (max-width:768px) {
-    .background-video{
-        background: radial-gradient(40.71% 19.18% at 49.49% 56.85%, #1A485C -57%, #152839 76%);
+    .main-section{
+        background: #152838;
         object-position: 50% 67%;
     }
     .animated-content .heading-output p{
         font-size: 2rem;
-    }
-
-    .animated-content .info-output p{
-        font-size: 1rem;
     }
 }
 
