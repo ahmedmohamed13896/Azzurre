@@ -22,4 +22,7 @@ function startAnimation() {
 
 window.onload = function () {
     document.querySelector('.loader_section').style.display =  'none';
+    if (navigator.userAgent.indexOf('Mac OS X') !== -1) {
+        document.querySelector(".main-section").classList.add('mac');
+      }
 };
