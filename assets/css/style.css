@@ -13,7 +13,7 @@ body {
     width: 100%;
     display: flex;
     position: relative;
-    background: #152838;
+    background: #152837;
 }
 
 .main-content {
@@ -300,7 +300,6 @@ footer .icon-link:hover .icon-hover{
 
 @media screen and (max-width:768px) {
     .main-section{
-        background: #152838;
         object-position: 50% 67%;
     }
     .animated-content .heading-output p{
