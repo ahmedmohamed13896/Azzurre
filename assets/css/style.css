@@ -179,6 +179,7 @@ body {
     opacity: 0;
     transform: translateY(100%);
     animation: fadeInUp 1.5s ease-in forwards;
+    min-height: 80px;
 }
 
 .animated-content .heading-output span {
@@ -191,10 +192,6 @@ body {
 }
 
 .animated-content .active .heading-output {
-    display: block;
-}
-
-.animated-content .active .heading-output{
     display: block;
 }
 
