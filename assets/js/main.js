@@ -22,4 +22,17 @@ function startAnimation() {
 
 window.onload = function () {
     document.querySelector('.loader_section').style.display =  'none';
+
+    const video = document.getElementById('background-video');
+    const webmSource = document.getElementById('webmSource');
+    const mp4Source = document.getElementById('mp4Source');
+
+    // Check if the browser can play WebM format
+    if (!video.canPlayType('video/webm')) {
+        // Remove the WebM source if it's not supported
+        webmSource.remove();
+    }
+    
+    // Load the video again to use the remaining source
+    video.load();
 };
