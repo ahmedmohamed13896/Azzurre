@@ -22,12 +22,18 @@
     <main class="main-section">
         <!-- Background video -->
          <div class="video-wrapper">
-             <video id="background-video" class="background-video" autoplay muted playsinline 
+             <video class="background-video web" autoplay muted playsinline 
                  poster="./assets/images/Azzurre-background.png">
                  <!-- <source id="webmSource" src="./assets/videos/background.webm" type="video/webm"> -->
                  <!-- <source src="./assets/videos/background.mp4" type="video/mp4"> -->
-                 <!-- <source  id="mp4Source" src="./assets/videos/background2.mp4" type="video/mp4"> -->
-                 <source  id="mp4Source" src="./assets/videos/background3.mp4" type="video/mp4">
+                 <source class="web" src="./assets/videos/background3.mp4" type="video/mp4">
+                 Your browser does not support the video tag.
+             </video>
+             <video class="background-video portrait" autoplay muted playsinline 
+                 poster="./assets/images/Azzurre-background.png">
+                 <!-- <source id="webmSource" src="./assets/videos/background.webm" type="video/webm"> -->
+                 <!-- <source src="./assets/videos/background.mp4" type="video/mp4"> -->
+                 <source class="portrait" src="./assets/videos/background2.mp4" type="video/mp4">
                  Your browser does not support the video tag.
              </video>
          </div>

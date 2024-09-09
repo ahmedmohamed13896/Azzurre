@@ -58,6 +58,13 @@ body {
     height: 100%;
 }
 
+.background-video.portrait{
+    display: none;
+}
+.background-video.web{
+    display: block;
+}
+
 .logo {
     max-width: 300px;
     width: 90%;
@@ -301,6 +308,16 @@ footer .icon-link:hover .icon-hover{
 @media screen and (max-width:768px) {
     .animated-content .heading-output p{
         font-size: 2rem;
+    }
+}
+
+@media screen and (max-width:1024px) and (orientation: portrait) {
+    .background-video.portrait{
+        display: block;
+        object-fit: contain;
+    }
+    .background-video.web{
+        display: none;
     }
 }
 
