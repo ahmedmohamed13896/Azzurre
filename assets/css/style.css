@@ -13,7 +13,11 @@ body {
     width: 100%;
     display: flex;
     position: relative;
-    background-color: #152837;
+    background-image: url(../images/BG.jpg);
+    /* background-color: color(display-p3 0.1 0.15 0.21); */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 
@@ -40,7 +44,7 @@ body {
     display: flex;
     justify-content: center;
     overflow: hidden;
-    padding-top: 100px;
+    padding-top: 60px;
 }
 
 .background-video {
@@ -50,7 +54,7 @@ body {
     object-fit: contain;
     overflow: hidden;
     object-position: center;
-    max-width: 1000px;
+    max-width: 900px;
     margin: auto;
 }
 
@@ -300,14 +304,6 @@ footer .icon-link:hover .icon-hover{
     }
 }
 
-
-/* large Screeens */
-@media screen and (min-width:768px) {
-    .main-section.safari{
-        background-color: #152d41 !important;
-    }
-}
-
 /* Keyframes */
 @keyframes fadeInUp {
     0% {
@@ -318,11 +314,5 @@ footer .icon-link:hover .icon-hover{
     100% {
         opacity: 1;
         transform: translateY(0);
-    }
-}
-
-@supports (-webkit-touch-callout: none) {
-    .main-section {
-        background-color: #152d41 !important; /* Change the background color for macOS and iPad Safari */
     }
 }
