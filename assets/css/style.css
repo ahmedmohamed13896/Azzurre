@@ -15,6 +15,9 @@ body {
     position: relative;
     background-color: #152837;
 }
+.main-section.safari{
+    background-color: #152d41 !important;
+}
 
 .main-content {
     overflow: hidden;

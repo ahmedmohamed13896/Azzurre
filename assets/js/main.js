@@ -20,6 +20,28 @@ function startAnimation() {
     requestAnimationFrame(animateFrames);
 }
 
+
+function applySafariStyles() {
+    if (isSafariOnMac() || isSafariOnIpad()) {
+        document.querySelectorAll('.main-section').classList.add('safari');
+    } 
+}
+
+function isSafariOnMac() {
+    const ua = navigator.userAgent;
+    const isSafari = /Safari/.test(ua) && !/Chrome/.test(ua);
+    const isMac = /Mac/.test(navigator.platform);
+    return isSafari && isMac;
+}
+
+function isSafariOnIpad() {
+    const ua = navigator.userAgent;
+    const isSafari = /Safari/.test(ua) && !/Chrome/.test(ua);
+    const isIpad = /iPad/.test(navigator.platform) || (navigator.userAgent.includes('Mac') && 'ontouchend' in document);
+    return isSafari && isIpad;
+}
+
 window.onload = function () {
     document.querySelector('.loader_section').style.display =  'none';
+    applySafariStyles();
 };
