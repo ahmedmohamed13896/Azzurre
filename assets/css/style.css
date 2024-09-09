@@ -15,9 +15,7 @@ body {
     position: relative;
     background-color: #152837;
 }
-.main-section.safari{
-    background-color: #152d41 !important;
-}
+
 
 .main-content {
     overflow: hidden;
@@ -302,6 +300,14 @@ footer .icon-link:hover .icon-hover{
     }
 }
 
+
+/* large Screeens */
+@media screen and (min-width:768px) {
+    .main-section.safari{
+        background-color: #152d41 !important;
+    }
+}
+
 /* Keyframes */
 @keyframes fadeInUp {
     0% {
@@ -315,7 +321,7 @@ footer .icon-link:hover .icon-hover{
     }
 }
 
-@supports (-webkit-touch-callout: none) and (hover: hover) {
+@supports (-webkit-touch-callout: none) {
     .main-section {
         background-color: #152d41 !important; /* Change the background color for macOS and iPad Safari */
     }
