@@ -311,3 +311,9 @@ footer .icon-link:hover .icon-hover{
         transform: translateY(0);
     }
 }
+
+@supports (-webkit-touch-callout: none) and (hover: hover) {
+    .main-section {
+        background-color: #152d41 !important; /* Change the background color for macOS and iPad Safari */
+    }
+}
