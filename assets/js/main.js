@@ -23,7 +23,7 @@ function startAnimation() {
 
 function applySafariStyles() {
     if (isSafariOnMac() || isSafariOnIpad()) {
-        document.querySelectorAll('.main-section').classList.add('safari');
+        document.querySelector('.main-section').classList.add('safari');
     } 
 }
 
